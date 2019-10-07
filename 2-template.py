@@ -67,8 +67,9 @@ def get3Samp(wordL, word):
             if(len(exams) != 0):
                 goodExamples = checkExam(wordL[i],exams)
 ####TODO: good examples sometimes are empty
-                modExam = modExamples(goodExamples, wordL[i], word)
-                sampleL.append(modExam)
+                if(len(goodExamples) != 0): 
+                    modExam = modExamples(goodExamples, wordL[i], word)
+                    sampleL.append(modExam)
     return sampleL
     
 
